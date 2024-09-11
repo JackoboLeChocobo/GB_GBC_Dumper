@@ -30,7 +30,7 @@ types:
   2.  MBC3 (No RTC support yet)
   3.  MBC5
 
-All testing of the communicator program has been done on Linux. It is not known whether it would even compile on other systems, but there's a good chance of it working on other Unices (such as FreeBSD).
+The software will be tested on Linux. It is not known whether it would even compile on other systems, but there's a good chance of it working on other Unices (such as FreeBSD).
 
 ## How to Connect the Arduino Board to the N64 Controller
 

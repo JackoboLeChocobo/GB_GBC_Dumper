@@ -1,12 +1,13 @@
+# GB(C) Dumper
+
 Fork of the project "arduinogbdump" ( Author : Andrew Clark (FL4SHK) )
 Github : https://github.com/fl4shk/arduinogbdump
 
-# Modifications applied
+## Modifications applied
 - Software : Cleaning code
 - Firmware : Updated project structure & optimisation 
 
-
-# Presentation
+## Presentation
 
 GB(C) Dumper will allow you to dump GB/GBC real cartridges to obtain their ROM.
 The required hardwares are :
@@ -15,8 +16,7 @@ The required hardwares are :
 - a N64 Transfer Pak
 - a pull-up resistor.
 
-
-# Features/Compatibility
+## Features/Compatibility
 
 There is currently support for dumping ROMs from cartridges of the following types:
   1.  ROM Only (32 kiB)
@@ -40,20 +40,15 @@ types:
 
 All testing of the communicator program has been done on Linux. It is not known whether it would even compile on other systems, but there's a good chance of it working on other Unices (such as FreeBSD).
 
-
-#How to Connect the Arduino Board to the N64 Controller
-
-TODO
-
-
-#Arduino Board Compatibility
+## How to Connect the Arduino Board to the N64 Controller
 
 TODO
 
+## Arduino Board Compatibility
 
-#Credits/Thanks
+TODO
+
+## Credits/Thanks
 
 - [Andrew Clark (FL4SHK)](https://github.com/fl4shk/arduinogbdump) 
 - [brownan](https://github.com/brownan/Gamecube-N64-Controller)
-
-

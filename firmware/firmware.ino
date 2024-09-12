@@ -38,7 +38,7 @@ void setup()
 	
 	interrupts();
 	Serial.begin(115200);
-	Serial.setTimeout(2); //Or 20? // 2 ms timeout
+	Serial.setTimeout(20); //Better result with 20ms instead of 2ms
   }
 
 void loop()

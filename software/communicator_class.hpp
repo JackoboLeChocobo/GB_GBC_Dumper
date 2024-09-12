@@ -110,8 +110,7 @@
 		
 		while ( left_to_read > 0 )
 			{
-			int num_read = read( fd, &( recv_buf[32 - left_to_read] ), 
-				recv_buf.size() );
+			int num_read = read( fd, &( recv_buf[32 - left_to_read] ), recv_buf.size() );
 			
 			if ( num_read < 0 )
 				{

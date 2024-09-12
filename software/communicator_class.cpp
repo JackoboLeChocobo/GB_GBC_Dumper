@@ -25,7 +25,7 @@ using namespace std;
 
 communicator::communicator( int argc, char** argv )
 	{
-	fd = open( argv[1], O_RDWR | O_NOCTTY | O_NONBLOCK );
+	fd = open( argv[1], O_RDWR | O_NOCTTY );
 	
 	if ( fd < 0 )
 		{

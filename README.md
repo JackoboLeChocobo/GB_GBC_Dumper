@@ -34,7 +34,7 @@ The software will be tested on Linux ( [Fenikkusu](https://jackobo.info/?datas=f
 
 ## How to Connect the Arduino Board to the N64 Controller
 
-TODO
+![alt text](https://github.com/JackoboLeChocobo/GB_GBC_Dumper/blob/main/schematics/arduino_mega_2560.png?raw=true)
 
 ## Arduino Board Compatibility
 

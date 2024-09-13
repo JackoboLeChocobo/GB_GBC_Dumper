@@ -2,7 +2,7 @@
 
 Fork of the project "arduinogbdump" ( Author : Andrew Clark (FL4SHK) - https://github.com/fl4shk/arduinogbdump ), GB(C) Dumper will allow you to dump your GB/GBC real cartridges to obtain their ROM.
 
-The **required** hardwares are : a **supported** Arduino, an *official* N64 controller, a N64 Transfer Pak and a pull-up resistor.
+The **required** hardwares are : a **supported** Arduino, an **official** N64 controller, a N64 Transfer Pak and a pull-up resistor.
 
 ## Modifications applied
 - Software : Cleaning code & Bug fix on detection + reading

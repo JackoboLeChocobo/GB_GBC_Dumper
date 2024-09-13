@@ -10,11 +10,9 @@ The **required** hardwares are : a **supported** Arduino, an **official** N64 co
 
 ## Features/Compatibility
 
-There is currently support for dumping ROMs from cartridges of the following types: ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*mostly* complete support, but only works for ROMs up to 4 MiB.)
+There is currently support for dumping ROMs from cartridges of the following types: ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*mostly* complete support, but only works for ROMs up to 4 MiB).
 
-There is currently support for dumping RAM from cartridges of the following types: MBC1, MBC2, MBC3 (No RTC support yet),  MBC5
-
-There is currently support for restoring RAM to cartridges of the following types: MBC1, MBC3 (No RTC support yet), MBC5
+There is currently support for dumping RAM from cartridges of the following types: MBC1, MBC2, MBC3 (No RTC support yet),  MBC5.
 
 The software will be tested on Linux ( [Fenikkusu](https://jackobo.info/?datas=fenikkusu) / Debian ). It is not known whether it would even compile on other systems, but there's a good chance of it working on other Unices (such as FreeBSD).
 

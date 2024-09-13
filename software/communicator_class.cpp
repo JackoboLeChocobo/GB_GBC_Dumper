@@ -42,9 +42,9 @@ communicator::communicator( int argc, char** argv )
 	communicator_action action;
 	
 	if ( argv2 == "dump_rom" )				action = do_rom_dump;
-	else if ( argv2 == "dump_rom_banks" )	action = do_rom_banks_dump;
 	else if ( argv2 == "dump_ram" )			action = do_ram_dump;
-	else if ( argv2 == "restore_ram" )		action = do_ram_restore;
+	//else if ( argv2 == "dump_rom_banks" )	action = do_rom_banks_dump;
+	//else if ( argv2 == "restore_ram" )		action = do_ram_restore;
 	else
 		{
 		cout << "Error:  Invalid command.\n";
@@ -56,6 +56,7 @@ communicator::communicator( int argc, char** argv )
 	switch (action)
 		{
 		case do_rom_dump:
+			cout << "Trying to dump ROM" << endl;;
 			of_name = argv3;
 			ofile.open( of_name, ios_base::out | ios_base::binary );
 			
@@ -81,7 +82,7 @@ communicator::communicator( int argc, char** argv )
 						
 			dump_rom( start_bank, num_banks );
 			break;
-		case do_rom_banks_dump:
+		/*case do_rom_banks_dump:
 			// In this case, of_name is used as the base name for all the
 			// ROM bank files that are to be generate
 			of_name = argv3;
@@ -100,8 +101,9 @@ communicator::communicator( int argc, char** argv )
 				}
 			
 			dump_rom_banks_to_separate_files( start_bank, num_banks );
-			break;
+			break;*/
 		case do_ram_dump:
+			cout << "Trying to dump RAM" << endl;
 			of_name = argv3;
 			ofile.open( of_name, ios_base::out | ios_base::binary );
 			
@@ -113,7 +115,7 @@ communicator::communicator( int argc, char** argv )
 			
 			dump_ram();
 			break;
-		case do_ram_restore:
+		/*case do_ram_restore:
 			if_name = argv3;
 			ifile.open( if_name, ios_base::in | ios_base::binary );
 			
@@ -124,7 +126,7 @@ communicator::communicator( int argc, char** argv )
 				}
 			
 			restore_ram();
-			break;
+			break;*/
 		default:
 			cout << "There's some weird bug....\n";
 			return;
@@ -1066,30 +1068,30 @@ void communicator::dump_rom( u16 start_bank, u16 num_banks )
 	
 	if ( cart_mbc_type == rom_only )
 		{
-		cout << "No MBC at all, just a 32 kiB ROM\n";
+		cout << "No MBC Cartridge at all, just a 32 kiB Cartridge ROM\n";
 		rom_only_dump_rom();
 		}
 	else if ( ( cart_mbc_type >= mbc1 ) && ( cart_mbc_type <= mbc1_ram ) )
 		{
-		cout << "MBC1 Cartridge\n";
+		cout << "MBC1 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc1_dump_rom( start_bank, num_banks );
 		}
 	else if ( cart_mbc_type == mbc2 )
 		{
-		cout << "MBC2 Cartridge\n";
+		cout << "MBC2 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc2_dump_rom( start_bank, num_banks );
 		}
 	else if ( ( cart_mbc_type >= mbc3 ) && ( cart_mbc_type <= mbc3_ram ) )
 		{
-		cout << "MBC3 Cartridge\n";
+		cout << "MBC3 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc3_dump_rom( start_bank, num_banks );
 		}
 	else if ( ( cart_mbc_type >= mbc5 ) && ( cart_mbc_type <= mbc5_ram ) )
 		{
-		cout << "MBC5 Cartridge\n";
+		cout << "MBC5 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc5_dump_rom( start_bank, num_banks );
 		}
@@ -1110,25 +1112,25 @@ void communicator::dump_rom_banks_to_separate_files( u16 start_bank, u16 num_ban
 		}
 	else if ( ( cart_mbc_type >= mbc1 ) && ( cart_mbc_type <= mbc1_ram ) )
 		{
-		cout << "MBC1 Cartridge\n";
+		cout << "MBC1 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc1_dump_rom_banks_to_separate_files( start_bank, num_banks );
 		}
 	else if ( cart_mbc_type == mbc2 )
 		{
-		cout << "MBC2 Cartridge\n";
+		cout << "MBC2 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc2_dump_rom_banks_to_separate_files( start_bank, num_banks );
 		}
 	else if ( ( cart_mbc_type >= mbc3 ) && ( cart_mbc_type <= mbc3_ram ) )
 		{
-		cout << "MBC3 Cartridge\n";
+		cout << "MBC3 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc3_dump_rom_banks_to_separate_files( start_bank, num_banks );
 		}
 	else if ( ( cart_mbc_type >= mbc5 ) && ( cart_mbc_type <= mbc5_ram ) )
 		{
-		cout << "MBC5 Cartridge\n";
+		cout << "MBC5 Cartridge Found\n";
 		cout << "Number of ROM Banks : " << std::to_string(rom_size) << "\n";
 		mbc5_dump_rom_banks_to_separate_files( start_bank, num_banks );
 		}

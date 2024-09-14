@@ -13,12 +13,12 @@ static const byte micro_bitwisse_thing = 0x02;
 // This should be used for the Arduino Mega or Arduino Mega 2560.
 static const byte mega_bitwise_thing = 0x10;
 
-#if ( defined (__AVR_ATmega328P__) || defined (__AVR_ATmega168__) )
+#if ( defined (__AVR_ATmega1280__) || defined (__AVR_ATmega2560__) )
+	#define PORT_THING mega_bitwise_thing
+#elif ( defined (__AVR_ATmega328P__) || defined (__AVR_ATmega168__) )
 	#define PORT_THING default_bitwise_thing
 #elif defined (__AVR_ATmega32U4__)
 	#define PORT_THING micro_bitwise_thing
-#elif ( defined (__AVR_ATmega1280__) || defined (__AVR_ATmega2560__) )
-	#define PORT_THING mega_bitwise_thing
 #else
 	#error This program doesn't work on your Arduino (yet)!
 #endif
@@ -32,7 +32,11 @@ static const byte mega_bitwise_thing = 0x10;
 // these two macros set arduino pin 2 to input or output, which with an
 // external 1K pull-up resistor to the 3.3V rail, is like pulling it high or
 // low.  These operations translate to 1 op code, which takes 2 cycles
-#if ( defined (__AVR_ATmega328P__) || defined (__AVR_ATmega168__) )
+#if ( defined (__AVR_ATmega1280__) || defined (__AVR_ATmega2560__) )
+	#define N64_HIGH DDRE &= ~PORT_THING
+	#define N64_LOW DDRE |= PORT_THING
+	#define N64_QUERY (PINE & PORT_THING)
+#elif ( defined (__AVR_ATmega328P__) || defined (__AVR_ATmega168__) )
 	#define N64_HIGH DDRD &= ~PORT_THING
 	#define N64_LOW DDRD |= PORT_THING
 	#define N64_QUERY (PIND & PORT_THING)
@@ -40,10 +44,6 @@ static const byte mega_bitwise_thing = 0x10;
 	#define N64_HIGH DDRD &= ~PORT_THING
 	#define N64_LOW DDRD |= PORT_THING
 	#define N64_QUERY (PIND & PORT_THING)
-#elif ( defined (__AVR_ATmega1280__) || defined (__AVR_ATmega2560__) )
-	#define N64_HIGH DDRE &= ~PORT_THING
-	#define N64_LOW DDRE |= PORT_THING
-	#define N64_QUERY (PINE & PORT_THING)
 #else
 	#error This program doesn't work on your Arduino (yet)!
 #endif

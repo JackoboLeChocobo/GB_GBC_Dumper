@@ -43,7 +43,7 @@ int main( int argc, char** argv )
 		return 0;
 	}
 	
-	//communicator the_communicator( argc, argv );
+	communicator the_communicator( argc, argv );
 	
 	if(strstr(argv[3], ".gb") || strstr(argv[3], ".gbc"))
 		{

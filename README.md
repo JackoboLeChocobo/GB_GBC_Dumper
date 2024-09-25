@@ -1,30 +1,30 @@
 # GB(C) Dumper
 
-Fork of the project "arduinogbdump" ( Author : Andrew Clark (FL4SHK) - https://github.com/fl4shk/arduinogbdump ), GB(C) Dumper will allow you to dump your GB/GBC real cartridges to obtain their ROM.
+Fork du projet "arduinogbdump" ( Auteur : Andrew Clark (FL4SHK) - https://github.com/fl4shk/arduinogbdump ), GB(C) Dumper vous permettra de récupérer les ROM/données de vos cartouches GameBoy & GameBoy Color.
 
-The **required** hardwares are : a **supported** Arduino, an **official** N64 controller, a N64 Transfer Pak and a pull-up resistor.
+Voici la liste des éléments **requis** : un Arduino **compatible**, une manette **officielle** N64, un Transfer Pak N64 et une résistance pull-up.
 
-## Modifications applied
-- Software : Cleaning code & Bug fix on detection + reading
+## Modifications appliquées
+- Logiciel : Nettoyage du code & Correction des bugs  sur la détection & la lecture
 - Firmware : Updated project structure & optimisation 
 
-## Features/Compatibility
+## Caractériques
 
-There is currently support for dumping ROMs from cartridges of the following types: ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*mostly* complete support, but only works for ROMs up to 4 MiB).
+Vous pouvez récupérer les données "ROM" des cartouches suivantes : ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*quasiment* complète, mais pas au delà de 4 MiB).
 
-There is currently support for dumping RAM from cartridges of the following types: MBC1, MBC2, MBC3 (No RTC support yet),  MBC5.
+Vous pouvez récupérer les données "ROM" des cartouches suivantes : MBC1, MBC2, MBC3 (support RTC non supporté),  MBC5.
 
-The software will be tested on Linux ( [Fenikkusu](https://jackobo.info/?datas=fenikkusu) / Debian ). It is not known whether it would even compile on other systems, but there's a good chance of it working on other Unices (such as FreeBSD).
+Le logiciel a été testé sous Linux ( [Fenikkusu](https://jackobo.info/?datas=fenikkusu) / Debian ). Vous pouvez essayer de le compiler et de l'utiliser sur les autres systèmes Unix (tel que FreeBSD).
 
-## How to Connect the Arduino Board to the N64 Controller
+## Comment connecter la manette N64 sur la carte Arduino
 
 ![alt text](https://github.com/JackoboLeChocobo/GB_GBC_Dumper/blob/main/schematics/arduino_mega_2560.png?raw=true)
 
-## Arduino Board Compatibility
+## Liste des cartes Arduino compatibles
 
-12th Sept 2024 : Tested successfully on Arduino Mega 2560 R3 
+12 Septembre 2024 : Testé avec succès sur Arduino Mega 2560 R3 
 
-## Credits/Thanks
+## Remerciements
 
 - [Andrew Clark (FL4SHK)](https://github.com/fl4shk/arduinogbdump) 
 - [brownan](https://github.com/brownan/Gamecube-N64-Controller)

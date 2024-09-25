@@ -8,7 +8,7 @@ Voici la liste des éléments **requis** : un Arduino **compatible**, une manett
 - Logiciel : Nettoyage du code & Correction des bugs  sur la détection & la lecture
 - Firmware : Updated project structure & optimisation 
 
-## Caractériques
+## Caractéristiques
 
 Vous pouvez récupérer les données "ROM" des cartouches suivantes : ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*quasiment* complète, mais pas au delà de 4 MiB).
 

@@ -1,6 +1,6 @@
 CXX_DIRS=./
 
-PROJ=GB_GBC_Dumper
+PROJ=run
 
 CXX=g++
 LD=gcc

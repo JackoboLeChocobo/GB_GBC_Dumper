@@ -24,8 +24,10 @@ Le logiciel a été testé sous Linux ( [Fenikkusu](https://jackobo.info/?datas=
 
 Si l'executable "run" n'est pas présent dans le dossier "software", utiliser la commande "make" pour compiler le programme.
 
-- 1:  ./GB_GBC_Dumper.sh {Arduino_Serial_Dev} dump_rom {your_name}.(gb|gbc)
-- 2:  ./GB_GBC_Dumper.sh {Arduino_Serial_Dev} dump_ram {your_name}.sav
+```
+./GB_GBC_Dumper.sh {Arduino_Serial_Dev} dump_rom {your_name}.(gb|gbc)
+./GB_GBC_Dumper.sh {Arduino_Serial_Dev} dump_ram {your_name}.sav
+```
 
 ## Liste des cartes Arduino compatibles
 

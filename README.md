@@ -12,7 +12,7 @@ Voici la liste des éléments **requis** : un Arduino **compatible**, une manett
 
 Vous pouvez récupérer les données "ROM" des cartouches suivantes : ROM Only (32 kiB), MBC1, MBC2, MBC3, MBC5 (*quasiment* complète, mais pas au delà de 4 MiB).
 
-Vous pouvez récupérer les données "ROM" des cartouches suivantes : MBC1, MBC2, MBC3 (support RTC non supporté),  MBC5.
+Vous pouvez récupérer les données "RAM" des cartouches suivantes : MBC1, MBC2, MBC3 (support RTC non supporté),  MBC5.
 
 Le logiciel a été testé sous Linux ( [Fenikkusu](https://jackobo.info/?datas=fenikkusu) / Debian ). Vous pouvez essayer de le compiler et de l'utiliser sur les autres systèmes Unix (tel que FreeBSD).
 

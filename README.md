@@ -32,6 +32,14 @@ NOTE : Si l'executable "run" n'est pas présent dans le dossier "software", util
 
 12 Septembre 2024 : Testé avec succès sur Arduino Mega 2560 R3 
 
+## Jeux testés
+
+- Kirby's Dream Land
+- Micro Machines 1 and 2 : Twin Turbo
+- Super Mario Land 2 : 6 Golden Coins
+- The Legend of Zelda : Oracle of Ages (Version Japonaise)
+- The Legend of Zelda : Oracle of Seasons (Version Japonaise)
+
 ## Remerciements
 
 - [Andrew Clark (FL4SHK)](https://github.com/fl4shk/arduinogbdump) 

@@ -39,6 +39,7 @@ NOTE : Si l'executable "run" n'est pas présent dans le dossier "software", util
 - Super Mario Land 2 : 6 Golden Coins
 - The Legend of Zelda : Oracle of Ages (Version Japonaise)
 - The Legend of Zelda : Oracle of Seasons (Version Japonaise)
+- Wario Land 3
 
 ## Remerciements
 
